@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Catalogue</title>
+<style>
+body { background:lightblue; font-family:Calibri; }
+h1 { text-align:center; color:blue; }
+.gc { display:grid; grid-template-columns:auto auto auto; gap:10px; justify-content:space-around; }
+.card { border:5px inset darkblue; max-width:400px; background:white; text-align:center; padding:10px; }
+.card h2 { color:blue; }
+.card button { background:blue; color:white; border:none; padding:10px 20px; cursor:pointer; }
+.card button:hover { background:darkblue; }
+@media screen and (max-width:700px) { .gc { grid-template-columns:auto; } }
+</style>
+</head>
+<body>
+<h1>TECH CATALOGUE</h1>
+<div class="gc">
+<div class="card">
+  <h2>MacBook Pro 14-inch</h2>
+  <h3><del>1,99,900/-</del> 1,75,000/-</h3>
+  <p>Powerful Apple M4 chip, Retina display, all-day battery</p>
+  <button>Add to Cart</button>
+</div>
+<div class="card">
+  <h2>Noise-Cancelling Wireless Earbuds</h2>
+  <h3><del>14,999/-</del> 9,999/-</h3>
+  <p>Immersive sound, long battery life</p>
+  <button>Add to Cart</button>
+</div>
+<div class="card">
+  <h2>65W Fast Charger</h2>
+  <h3><del>3,499/-</del> 1,999/-</h3>
+  <p>Universal compatibility with laptops and tablets</p>
+  <button>Add to Cart</button>
+</div>
+</div>
+</body>
+</html>

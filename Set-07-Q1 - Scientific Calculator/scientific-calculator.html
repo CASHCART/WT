@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scientific Calculator</title>
+<style>
+body { max-width:450px; margin:30px auto; font-family:Arial; }
+input { display:block; width:100%; margin:8px 0; box-sizing:border-box; }
+.keys { display:grid; grid-template-columns:repeat(4,1fr); gap:8px; }
+button { padding:10px; }
+</style>
+</head>
+<body>
+<h2>Scientific Calculator</h2>
+<label for="a">Number 1:</label><input type="number" id="a" step="any">
+<label for="b">Number 2:</label><input type="number" id="b" step="any">
+<div class="keys">
+<button onclick="calculate('+')">+</button><button onclick="calculate('-')">-</button>
+<button onclick="calculate('*')">*</button><button onclick="calculate('/')">/</button>
+<button onclick="calculate('pow')">x^y</button><button onclick="calculate('sqrt')">sqrt</button>
+<button onclick="calculate('log')">log</button><button onclick="calculate('ln')">ln</button>
+<button onclick="calculate('sin')">sin</button><button onclick="calculate('cos')">cos</button>
+<button onclick="calculate('tan')">tan</button><button onclick="clearAll()">Clear</button>
+</div>
+<p>Result: <output id="result"></output></p>
+<script>
+function calculate(op) {
+    var a = parseFloat(document.getElementById("a").value);
+    var b = parseFloat(document.getElementById("b").value);
+    var r;
+    switch (op) {
+        case "+": r=a+b; break;
+        case "-": r=a-b; break;
+        case "*": r=a*b; break;
+        case "/": r=a/b; break;
+        case "pow": r=Math.pow(a,b); break;
+        case "sqrt": r=Math.sqrt(a); break;
+        case "log": r=Math.log10(a); break;
+        case "ln": r=Math.log(a); break;
+        case "sin": r=Math.sin(a*Math.PI/180); break;
+        case "cos": r=Math.cos(a*Math.PI/180); break;
+        case "tan": r=Math.tan(a*Math.PI/180); break;
+    }
+    document.getElementById("result").textContent=r;
+}
+function clearAll() {
+    document.getElementById("a").value="";
+    document.getElementById("b").value="";
+    document.getElementById("result").textContent="";
+}
+</script>
+</body>
+</html>

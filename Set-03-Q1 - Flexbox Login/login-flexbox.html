@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login Form</title>
+<style>
+h1 { text-align:center; color:blue; font-family:Arial; }
+body { background:white; }
+.form-container { width:90%; max-width:400px; margin:30px auto; background:white;
+    border:2px solid blue; padding:15px; font-family:Georgia; }
+.row { display:flex; margin:10px 0; }
+.row label { width:120px; }
+.field { flex:1; min-width:0; }
+input { width:100%; box-sizing:border-box; }
+.button-row { display:flex; justify-content:space-evenly; margin-top:15px; }
+.button-row input { width:auto; }
+</style>
+</head>
+<body>
+<h1>LOGIN FORM</h1>
+<form name="loginform" method="post" onsubmit="return validate()">
+<div class="form-container">
+  <div class="row"><label for="t1">Username:</label><div class="field">
+    <input type="text" id="t1" name="t1"></div></div>
+  <div class="row"><label for="t2">Password:</label><div class="field">
+    <input type="password" id="t2" name="t2"></div></div>
+  <div class="button-row"><input type="submit" value="SUBMIT">
+    <input type="reset" value="CLEAR"></div>
+</div>
+</form>
+<script>
+function validate() {
+    var f = document.forms["loginform"];
+    if (!/\S/.test(f.elements["t1"].value)) {
+        alert("Enter username"); return false;
+    }
+    if (!/\S/.test(f.elements["t2"].value)) {
+        alert("Enter password"); return false;
+    }
+    return true;
+}
+</script>
+</body>
+</html>

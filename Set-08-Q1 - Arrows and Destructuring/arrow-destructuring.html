@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JavaScript Features</title>
+</head>
+<body>
+
+<script>
+function add(a,b) { return a+b; }
+const multiply = (a,b) => a*b;
+const square = x => x*x;
+const greet = () => document.write("Hello, World!<br>");
+document.write(add(2,3) + "<br>");
+document.write(multiply(4,5) + "<br>");
+document.write(square(6) + "<br>");
+greet();
+
+const numbers = [10,20,30];
+const [f,s,t] = numbers;
+document.write(f + "<br>");
+document.write(s + "<br>");
+document.write(t + "<br>");
+const [x,,y] = numbers;
+document.write(x + "<br>");
+document.write(y + "<br>");
+const [a,b,c,d=40] = numbers;
+document.write(d + "<br>");
+const [p,...rest] = numbers;
+document.write(p + "<br>");
+document.write(rest + "<br>");
+const person = {name:"MKR", age:20, city:"Hyderabad"};
+const {name,age,city:ct} = person;
+document.write(name + "<br>");
+document.write(age + "<br>");
+document.write(ct + "<br>");
+const {country="India"} = person;
+document.write(country + "<br>");
+const employee = {id:101, details:{department:"IT", role:"Student"}};
+const {details:{department,role}} = employee;
+document.write(department + "<br>");
+document.write(role + "<br>");
+</script>
+</body>
+</html>

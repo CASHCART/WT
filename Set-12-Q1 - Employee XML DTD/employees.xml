@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE employees SYSTEM "employees.dtd">
+<employees>
+  <employee><employeeID>E101</employeeID><employeeName>Rahul</employeeName>
+    <department>IT</department><designation>Developer</designation>
+    <email>rahul@example.com</email><salary>45000.00</salary></employee>
+  <employee><employeeID>E102</employeeID><employeeName>Sita</employeeName>
+    <department>HR</department><designation>Manager</designation>
+    <email>sita@example.com</email><salary>55000.00</salary></employee>
+</employees>
